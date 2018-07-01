@@ -12,7 +12,7 @@ var Queue = function() {
     
     storage[count] = value;
     indexArr.push(count++);
-    var size = indexArr.length
+    var result = storage[count]
     return result;
 
   };
@@ -26,7 +26,7 @@ var Queue = function() {
   };
 
   someInstance.size = function() {
-    return count;
+    return indexArr.length;
   };
 
   return someInstance;
