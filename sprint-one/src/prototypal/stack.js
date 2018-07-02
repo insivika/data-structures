@@ -1,31 +1,47 @@
-Stack.stackMethods = {};
-  
-Stack.stackMethods.push = function(value){
+var Stack = function() {
 
-    this.storage[this.counter] = value;
+  var newStack = Object.create(Stack.prototype);
 
-    this.result = this.storage[this.counter];
+  newStack.storage = {};
 
-    this.counter++;
+  newStack.counter = 0;
 
-    return this.result;
+  return newStack;
+};
 
-  };
+var stackMethods = {};
 
-  Stack.stackMethods.pop = function(){
+Stack.prototype = {};
 
-    this.counter--;
+Stack.prototype.push = function(value){
 
-    this.result = this.storage[this.counter];
+  this.storage[this.counter] = value;
 
-    delete this.storage[this.counter];
+  this.result = this.storage[this.counter];
 
-    return this.result;
+  this.counter++;
 
-  };
+  return this.result;
 
-  Stack.stackMethods.size = function(){
+};
 
-    return this.counter;
+Stack.prototype.pop = function(){
 
-  };
+  this.counter--;
+
+  this.result = this.storage[this.counter];
+
+  delete this.storage[this.counter];
+
+  return this.result;
+
+};
+
+Stack.prototype.size = function(){
+
+  if(this.counter < 0){
+    return 0;
+  }
+  return this.counter;
+
+};
