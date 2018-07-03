@@ -6,14 +6,14 @@ var Stack = function() {
 
   newStack.storage = {};
 
-  newStack.result
+  newStack.result;
 
-  _.extend(newStack, stackMethods)
+  _.extend(newStack, stackMethods);
 
   return newStack;
 };
 
-var stackMethods = {}
+var stackMethods = {};
 
 stackMethods.push = function(value){
   this.storage[this.count] = value; 
@@ -32,7 +32,7 @@ stackMethods.pop = function(){
 
   this.result = this.storage[this.count];
 
-  delete this.storage[this.count]
+  delete this.storage[this.count];
 
   return this.result;
 

@@ -15,29 +15,29 @@ var Queue = function() {
 var queueMethods = {};
 
 queueMethods.enqueue = function(value){
-   this.indexArr.push(this.counter);
+  this.indexArr.push(this.counter);
 
-   this.storage[this.counter] = value;
+  this.storage[this.counter] = value;
 
-   this.result = this.storage[this.counter]
+  this.result = this.storage[this.counter];
   
-   this.counter++;
+  this.counter++;
 
-   return this.result;
+  return this.result;
 
 };
 
 queueMethods.dequeue = function(){
-   this.result = this.storage[this.indexArr[0]];
+  this.result = this.storage[this.indexArr[0]];
 
-   delete this.storage[this.indexArr[0]];
+  delete this.storage[this.indexArr[0]];
 
-   this.indexArr.shift(this.indexArr[0]);
+  this.indexArr.shift(this.indexArr[0]);
 
-   return this.result;
+  return this.result;
 
 };
 
 queueMethods.size = function(){
-   return this.indexArr.length;
+  return this.indexArr.length;
 };

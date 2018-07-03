@@ -1,14 +1,14 @@
 var Queue = function() {
 
-  var newQueue = Object.create(queueMethods)
+  var newQueue = Object.create(queueMethods);
   
-   newQueue.counter = 0;
+  newQueue.counter = 0;
 
-   newQueue.storage = {};
+  newQueue.storage = {};
 
-   newQueue.indexArr = [];
+  newQueue.indexArr = [];
 
-   return newQueue;
+  return newQueue;
 
 };
 
@@ -39,10 +39,10 @@ queueMethods.dequeue = function(){
 };
 
 queueMethods.size = function(){
-   if(this.indexArr < 0){
-     return 0;
-   } else {
-     return this.indexArr.length;
-   }
+  if(this.indexArr < 0){
+    return 0;
+  } else {
+    return this.indexArr.length;
+  }
 };
 

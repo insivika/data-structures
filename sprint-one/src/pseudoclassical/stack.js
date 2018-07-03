@@ -16,7 +16,7 @@ Stack.prototype.push = function(value){
 
   return this.result;
 
-}
+};
 
 Stack.prototype.pop = function(){
 
@@ -28,7 +28,7 @@ Stack.prototype.pop = function(){
 
   return this.result;
   
-}
+};
 
 Stack.prototype.size = function(){
   if(this.counter < 0){
@@ -40,5 +40,5 @@ Stack.prototype.size = function(){
     return this.counter;
 
   }
-}
+};
 

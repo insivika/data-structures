@@ -12,7 +12,7 @@ Queue.prototype.enqueue = function(value){
 
   this.storage[this.counter] = value;
 
-  this.result = this.storage[this.counter]
+  this.result = this.storage[this.counter];
 
   this.indexArr.push(this.counter);
 
@@ -20,7 +20,7 @@ Queue.prototype.enqueue = function(value){
 
   return this.result;
 
-}
+};
 
 Queue.prototype.dequeue = function(){
 
@@ -30,18 +30,18 @@ Queue.prototype.dequeue = function(){
 
   return this.result;
   
-}
+};
 
 Queue.prototype.size = function(){
 
   if(this.indexArr.length < 0){
     
-   return 0
+    return 0;
 
   } else {
 
-   return this.indexArr.length;
+    return this.indexArr.length;
 
   }
   
-}
+};
