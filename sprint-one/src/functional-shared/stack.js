@@ -8,14 +8,14 @@ var Stack = function() {
 
   newStack.result
 
-  _.extend(newStack, Stack.stackMethods)
+  _.extend(newStack, stackMethods)
 
   return newStack;
 };
 
-Stack.stackMethods = {}
+var stackMethods = {}
 
-Stack.stackMethods.push = function(value){
+stackMethods.push = function(value){
   this.storage[this.count] = value; 
   
   this.result = this.storage[this.count];
@@ -26,7 +26,7 @@ Stack.stackMethods.push = function(value){
    
 };
 
-Stack.stackMethods.pop = function(){
+stackMethods.pop = function(){
   
   this.count--;
 
@@ -38,7 +38,7 @@ Stack.stackMethods.pop = function(){
 
 };
 
-Stack.stackMethods.size = function(){
+stackMethods.size = function(){
   if(this.count < 0){
     return 0;
   }

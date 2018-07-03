@@ -7,14 +7,14 @@ var Queue = function() {
 
   newQueue.indexArr = [];
 
-  _.extend(newQueue, Queue.queueMethods);
+  _.extend(newQueue, queueMethods);
 
   return newQueue;
 };
 
-Queue.queueMethods = {};
+var queueMethods = {};
 
-Queue.queueMethods.enqueue = function(value){
+queueMethods.enqueue = function(value){
    this.indexArr.push(this.counter);
 
    this.storage[this.counter] = value;
@@ -27,7 +27,7 @@ Queue.queueMethods.enqueue = function(value){
 
 };
 
-Queue.queueMethods.dequeue = function(){
+queueMethods.dequeue = function(){
    this.result = this.storage[this.indexArr[0]];
 
    delete this.storage[this.indexArr[0]];
@@ -38,6 +38,6 @@ Queue.queueMethods.dequeue = function(){
 
 };
 
-Queue.queueMethods.size = function(){
+queueMethods.size = function(){
    return this.indexArr.length;
 };

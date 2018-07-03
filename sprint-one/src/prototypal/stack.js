@@ -1,6 +1,6 @@
 var Stack = function() {
 
-  var newStack = Object.create(Stack.prototype);
+  var newStack = Object.create(stackMethods);
 
   newStack.storage = {};
 
@@ -11,9 +11,8 @@ var Stack = function() {
 
 var stackMethods = {};
 
-Stack.prototype = {};
 
-Stack.prototype.push = function(value){
+stackMethods.push = function(value){
 
   this.storage[this.counter] = value;
 
@@ -25,7 +24,7 @@ Stack.prototype.push = function(value){
 
 };
 
-Stack.prototype.pop = function(){
+stackMethods.pop = function(){
 
   this.counter--;
 
@@ -37,7 +36,7 @@ Stack.prototype.pop = function(){
 
 };
 
-Stack.prototype.size = function(){
+stackMethods.size = function(){
 
   if(this.counter < 0){
     return 0;
@@ -45,3 +44,5 @@ Stack.prototype.size = function(){
   return this.counter;
 
 };
+
+
